@@ -1,0 +1,29 @@
+.legends-list {
+  display: flex;
+  margin: 10px 0;
+  span {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+
+    &:before {
+      content: "\A";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #a9d4ff;
+      display: inline-block;
+      margin: 0 10px;
+    }
+    &.not-available {
+      &:before {
+        background: #e6e6e6;
+      }
+    }
+    &.confirmed {
+      &:before {
+        background: #90e61f;
+      }
+    }
+  }
+}
