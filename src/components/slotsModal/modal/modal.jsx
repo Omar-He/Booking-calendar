@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import RModal from "react-modal";
 import { CloseIcon } from "../../../icons/closeIcon";
 import "./modal.scss";
 
-RModal.setAppElement("#root");
 const Modal = ({ children, title, onClose, open, className }) => {
+  useEffect(() => {
+    const appElement = document.getElementById("root");
+    RModal.setAppElement(appElement ? "#root" : "body");
+  }, []);
   if (!open) {
     return null;
   }

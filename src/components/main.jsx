@@ -13,8 +13,8 @@ import SlotsModal from "./slotsModal/slotsModal";
 
 export default function Main() {
   const [value, setValue] = useState(new Date());
-  const [allocatedSlots, setAllocatedSlots] = useState();
-  const [confirmedCalls, setConfirmedCalls] = useState();
+  const [allocatedSlots, setAllocatedSlots] = useState([]);
+  const [confirmedCalls, setConfirmedCalls] = useState([]);
   const [slotsToRender, setSlotsToRender] = useState([]);
   const [defaultSlots, setDefaultSlots] = useState([]);
   const [mentorInfo, setMentorInfo] = useState();
